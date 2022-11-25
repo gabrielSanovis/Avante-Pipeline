@@ -1,7 +1,7 @@
 {
-  "name": "vite-project",
+  "name": "avante",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,9 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@mui/icons-material": "^5.10.15",
-    "@mui/material": "^5.10.15",
-    "@mui/styled-engine-sc": "^5.10.14",
+    "@types/styled-components": "^5.1.26",
     "axios": "^1.2.0",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
@@ -21,6 +19,7 @@
     "react-router-dom": "^6.4.3",
     "sort-by": "^1.2.0",
     "styled-components": "^5.3.6",
+    "styled-reset": "^4.4.2",
     "yarn": "^1.22.19"
   },
   "devDependencies": {
