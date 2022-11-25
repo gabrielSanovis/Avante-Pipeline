@@ -1,9 +1,12 @@
-import React from 'react'
-import * as ReactDOM from 'react-dom/client'
-import App from './App'
+import * as React from "react";
+import ReactDOM from "react-dom/client";
+// import { App } from "./pages/App";
+import {SignIn} from './pages/SignIn'
+import {GlobalStyle} from './style/styles'
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-      <App />
+    <GlobalStyle />
+    <SignIn />
   </React.StrictMode>
-)
+);
