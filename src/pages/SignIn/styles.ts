@@ -9,7 +9,7 @@ export const Container = styled.div`
 `;
 
 export const Logo = styled.div`
-    background-image: url("/public/fav.png");
+    background-image: url("/fav.png");
     background-size: contain;
     background-repeat: no-repeat;
     width: 100px;
