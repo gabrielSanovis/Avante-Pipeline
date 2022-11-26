@@ -1,4 +1,5 @@
-export const theme = {
+export const theme: IThemeProps = {
+
     white: {
         colors: {
             WHITE: {
@@ -23,7 +24,15 @@ export const theme = {
             },
         }
     },
-    fontFamily: {
-        primary: "Roboto"
+    fonts: {
+        family: {
+            primary: "Roboto"
+        },
+        weight: {
+            regular: "400",
+            medium: "500",
+            bold: "700",
+        }
     }
+
 }
