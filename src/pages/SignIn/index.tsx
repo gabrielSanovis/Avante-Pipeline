@@ -18,6 +18,7 @@ import { theme } from '../../style/theme';
 import { words } from './mock';
 import { Field } from '../../components/Field';
 import { Button } from '../../components/Button';
+
 export function SignIn() {
     const [safety, setSafety] = useReducer((state: boolean) => {
         return !state
