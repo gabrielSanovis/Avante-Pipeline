@@ -5,7 +5,7 @@ export const FieldArea = styled.div`
     display: flex;
     flex-direction: column;
     row-gap: 8px;
-    width: 100%;
+    flex: 1;
 `;
 
 export const FieldHeader = styled.div`

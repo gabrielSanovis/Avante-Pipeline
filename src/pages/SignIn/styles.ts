@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 
 export const Container = styled.div`
     display: flex;
@@ -27,10 +27,17 @@ export const WelcomeText = styled.h3`
     margin-bottom: ${70/16}rem;
 `;
 
-export const FieldWrapper = styled.div`
+export const Form = styled.form`
     width: 90%;
+    display: flex;
+    row-gap: ${48/16}rem;
+    flex-direction: column;
+    align-items: center;
+`;
+
+export const FieldWrapper = styled.div`
+    width: 100%;
     max-width: 500px;
-    margin-bottom: ${48/16}rem;
 `;
 
 export const ChangeButton = styled.button`
@@ -48,3 +55,48 @@ export const ChangeButton = styled.button`
         background-color: rgba(0, 0, 0, 0.1);
     }
 `;
+
+export const RememberButton = styled.button`
+border: none;
+    padding: 0;
+    color: transparent;
+    background-color: transparent;
+    cursor: pointer;
+    height: 32px;
+    :focus {
+        outline: none;
+    }
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    margin-top: 16px;
+    margin-bottom: ${16/16}rem;
+`;
+
+export const RememberPasswordText = styled.p`
+    font-weight: ${({ theme: { fonts } }) => fonts.weight.regular};
+    font-size: 13px;
+    line-height: 15px;
+    color: ${({ theme: { white } }) => white.colors.WHITE[900]};
+    text-transform: uppercase;
+`;
+
+export const ButtonsWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    align-items: center;
+`;
+
+
+export const ForgotPassword = styled.button`
+    margin-top: 16px;
+    text-decoration: underline 2px ${({ theme: { white } }) => white.colors.WHITE[900]};
+    color: ${({ theme: { white } }) => white.colors.WHITE[900]};
+    font-weight: ${({ theme: { fonts } }) => fonts.weight.regular};
+    font-size: 13px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+`
