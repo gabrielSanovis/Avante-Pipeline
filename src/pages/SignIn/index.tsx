@@ -2,7 +2,7 @@
 import { useReducer } from 'react';
 
 // LIBS
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import * as yup from "yup"
 import { useForm } from 'react-hook-form';
 import { yupResolver } from "@hookform/resolvers/yup"
@@ -51,7 +51,7 @@ const CreateUserFormSchema = yup.object().shape({
 });
 
 export function SignIn() {
-
+    const navigate = useNavigate()
     const [safety, setSafety] = useReducer((state: boolean) => {
         return !state
     }, true)
@@ -69,7 +69,7 @@ export function SignIn() {
     });
 
     function onSubmit(data: userFormSignIn) {
-        console.log("entrou")
+        navigate("/dashboard")
     }
 
     return (
