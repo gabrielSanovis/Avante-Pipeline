@@ -1,6 +1,13 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
+import {Link} from "react-router-dom"
 
 export function OverView() {
-  return <Button variant="contained">OverView</Button>;
+  return (
+    <>
+    <h1>Overview</h1>
+      <button><Link to="/dashboard">Dashboard</Link></button>
+      <button><Link to="/dashboard/subjects">Subjects</Link></button>
+      <button><Link to="/dashboard/material">Material</Link></button>
+    </>
+  )
 }

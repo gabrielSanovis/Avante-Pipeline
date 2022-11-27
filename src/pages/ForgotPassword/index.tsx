@@ -16,6 +16,7 @@ import { theme } from '../../style/theme';
 import { words } from './mock';
 import { Field } from '../../components/Field';
 import { Button } from '../../components/Button';
+import { Link } from "react-router-dom"
 export function ForgotPassword() {
     const [safetyNew, setSafetyNew] = useReducer((state: boolean) => {
         return !state
@@ -32,7 +33,7 @@ export function ForgotPassword() {
                     <ForgotPasswordText>{words.forgotPasswordTitle.pt}</ForgotPasswordText>
                     <Form>
                         <FieldWrapper>
-                            <Field.Root label="Nova senha" errorMessage="Mensagem de erro">
+                            <Field.Root label="Nova senha" errorMessage="Mensagem de erro" field="newPassword">
                                 <Field.Icon>
                                     <ShieldStar />
                                 </Field.Icon>
@@ -46,7 +47,7 @@ export function ForgotPassword() {
                         </FieldWrapper>
 
                         <FieldWrapper>
-                            <Field.Root label="Confirma senha" errorMessage="Mensagem de erro">
+                            <Field.Root label="Confirma senha" errorMessage="Mensagem de erro" field='confirmPassword'>
                                 <Field.Icon>
                                     <ShieldStar />
                                 </Field.Icon>
@@ -60,8 +61,22 @@ export function ForgotPassword() {
                         </FieldWrapper>
 
                         <ButtonsWrapper>
-                            <Button larger="lg" variant='outline' type='submit'>Confirmar</Button>
-                            <Button larger="lg" variant='fill' type='button'>Voltar</Button>
+                            <Button
+                                larger="lg"
+                                variant='outline'
+                                type='submit'
+                            >
+                                Confirmar
+                            </Button>
+                            <Link to="/auth">
+                                <Button
+                                    larger="lg"
+                                    variant='fill'
+                                    type='button'
+                                >
+                                    Voltar
+                                </Button>
+                            </Link>
                         </ButtonsWrapper>
                     </Form>
                 </Container>

@@ -14,6 +14,7 @@ import { theme } from '../../style/theme';
 import { words } from './mock';
 import { Field } from '../../components/Field';
 import { Button } from '../../components/Button';
+import { Link } from "react-router-dom"
 export function SignUp() {
     const [safety, setSafety] = useReducer((state: boolean) => {
         return !state
@@ -29,23 +30,23 @@ export function SignUp() {
                     <RegistrationText>{words.registeTitle.pt}</RegistrationText>
                     <Form>
                         <FieldWrapper>
-                            <Field.Root label="Nome" errorMessage="Mensagem de erro">
+                            <Field.Root label="Nome" errorMessage="Mensagem de erro" field='name'>
                                 <Field.Icon>
                                     <User />
                                 </Field.Icon>
-                                <Field.Input placeholder='Digite aqui seu nome' type="email" />
+                                <Field.Input placeholder='Digite aqui seu nome' type="text" />
                             </Field.Root>
                         </FieldWrapper>
                         <FieldWrapper>
-                            <Field.Root label="Sobrenome" errorMessage="Mensagem de erro">
+                            <Field.Root label="Sobrenome" errorMessage="Mensagem de erro" field='lastName'>
                                 <Field.Icon>
                                     <User />
                                 </Field.Icon>
-                                <Field.Input placeholder='Digite aqui seu sobrenome' type="email" />
+                                <Field.Input placeholder='Digite aqui seu sobrenome' type="text" />
                             </Field.Root>
                         </FieldWrapper>
                         <FieldWrapper>
-                            <Field.Root label="E-mail" errorMessage="Mensagem de erro">
+                            <Field.Root label="E-mail" errorMessage="Mensagem de erro" field='email'>
                                 <Field.Icon>
                                     <EnvelopeSimple />
                                 </Field.Icon>
@@ -54,7 +55,7 @@ export function SignUp() {
                         </FieldWrapper>
 
                         <FieldWrapper>
-                            <Field.Root label="Senha" errorMessage="Mensagem de erro">
+                            <Field.Root label="Senha" errorMessage="Mensagem de erro" field='password'>
                                 <Field.Icon>
                                     <ShieldStar />
                                 </Field.Icon>
@@ -68,7 +69,7 @@ export function SignUp() {
                         </FieldWrapper>
 
                         <FieldWrapper>
-                            <Field.Root label="Confirma senha" errorMessage="Mensagem de erro">
+                            <Field.Root label="Confirma senha" errorMessage="Mensagem de erro" field='passwordConfirm'>
                                 <Field.Icon>
                                     <ShieldStar />
                                 </Field.Icon>
@@ -82,8 +83,22 @@ export function SignUp() {
                         </FieldWrapper>
 
                         <ButtonsWrapper>
-                            <Button larger="sm" variant='fill' type='button'>Voltar</Button>
-                            <Button larger="sm" variant='outline' type='submit'>Confirmar</Button>
+                            <Link to="/auth">
+                                <Button
+                                    larger="sm"
+                                    variant='fill'
+                                    type='button'
+                                >
+                                    Voltar
+                                </Button>
+                            </Link>
+                            <Button
+                                larger="sm"
+                                variant='outline'
+                                type='submit'
+                            >
+                                Confirmar
+                            </Button>
                         </ButtonsWrapper>
                     </Form>
                 </Container>

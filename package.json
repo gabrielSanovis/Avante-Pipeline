@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@hookform/error-message": "^2.0.1",
+    "@hookform/resolvers": "^2.9.10",
     "@radix-ui/react-slot": "^1.0.1",
     "@types/styled-components": "^5.1.26",
     "axios": "^1.2.0",
@@ -22,7 +24,8 @@
     "sort-by": "^1.2.0",
     "styled-components": "^5.3.6",
     "styled-reset": "^4.4.2",
-    "yarn": "^1.22.19"
+    "yarn": "^1.22.19",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@types/react": "^18.0.24",

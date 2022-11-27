@@ -1,6 +1,12 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
+import { Link } from "react-router-dom"
 
 export function Home() {
-  return <Button variant="contained">Home</Button>;
+  return (
+    <>
+      <button><Link to="/auth">rota auth</Link></button>
+      <button><Link to="/auth/sign-up">sign-up</Link></button>
+    </>
+
+  )
 }

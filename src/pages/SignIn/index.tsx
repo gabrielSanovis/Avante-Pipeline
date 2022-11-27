@@ -1,5 +1,19 @@
+// REACT
 import { useReducer } from 'react';
-import { Reset } from 'styled-reset'
+
+// LIBS
+import { Link } from "react-router-dom"
+import * as yup from "yup"
+import { useForm } from 'react-hook-form';
+import { yupResolver } from "@hookform/resolvers/yup"
+
+// ICONS
+import { EnvelopeSimple, Eye, EyeSlash, ShieldStar, CheckSquare, Square } from "phosphor-react";
+
+// MOCK
+import { words } from './mock';
+
+// STYLES
 import {
     Logo,
     Container,
@@ -12,43 +26,90 @@ import {
     ButtonsWrapper,
     ForgotPassword
 } from './styles';
-import { EnvelopeSimple, Eye, EyeSlash, ShieldStar, CheckSquare, Square } from "phosphor-react";
 import { ThemeProvider } from 'styled-components'
 import { theme } from '../../style/theme';
-import { words } from './mock';
+
+// COMPONENTS
 import { Field } from '../../components/Field';
 import { Button } from '../../components/Button';
 
+// INTERFACES
+export interface userFormSignIn {
+    email?: string;
+    password?: string;
+}
+
+export const emailRegex =
+    /^[\w.!#$%&'*+\/=?^_`{|}~-]+@\w(?:\w{0,61}\w)?(?:\.\w(?:[\w-]{0,61}\w)?)*$/gi;
+
+const CreateUserFormSchema = yup.object().shape({
+    email: yup.string().required("⚠ Email obrigatório").matches(emailRegex),
+    password: yup
+        .string()
+        .required("⚠ Senha obrigatória")
+        .min(8, "No mínimo 8 caracteres"),
+});
+
 export function SignIn() {
+
     const [safety, setSafety] = useReducer((state: boolean) => {
         return !state
     }, true)
+
     const [rememberPassword, setRememberPassword] = useReducer((state: boolean) => {
         return !state
     }, false)
+
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm<userFormSignIn>({
+        resolver: yupResolver(CreateUserFormSchema),
+    });
+
+    function onSubmit(data: userFormSignIn) {
+        console.log("entrou")
+    }
+
     return (
         <>
-            <Reset />
             <ThemeProvider theme={theme}>
                 <Container>
                     <Logo />
                     <WelcomeText>{words.welcomeText.pt}</WelcomeText>
-                    <Form>
+                    <Form onSubmit={handleSubmit(onSubmit)} >
                         <FieldWrapper>
-                            <Field.Root label="E-mail" errorMessage="Mensagem de erro">
+                            <Field.Root
+                                label="E-mail"
+                                errorMessage={errors}
+                                field="email"
+                            >
                                 <Field.Icon>
                                     <EnvelopeSimple />
                                 </Field.Icon>
-                                <Field.Input placeholder='example@email.com' type="email" />
+                                <Field.Input
+                                    placeholder='example@email.com'
+                                    type="email"
+                                    {...register("email")}
+                                />
                             </Field.Root>
                         </FieldWrapper>
 
                         <FieldWrapper>
-                            <Field.Root label="Senha" errorMessage="Mensagem de erro">
+                            <Field.Root
+                                label="Senha"
+                                errorMessage={errors}
+                                field="password"
+                            >
                                 <Field.Icon>
                                     <ShieldStar />
                                 </Field.Icon>
-                                <Field.Input placeholder='Digite aqui sua senha' type={safety ? "password" : "text"} />
+                                <Field.Input
+                                    placeholder='Digite aqui sua senha'
+                                    type={safety ? "password" : "text"}
+                                    {...register("password")}
+                                />
                                 <ChangeButton onClick={() => setSafety()} type="button">
                                     <Field.Icon>
                                         {safety ? <EyeSlash /> : <Eye />}
@@ -61,9 +122,27 @@ export function SignIn() {
                             </RememberButton>
                         </FieldWrapper>
                         <ButtonsWrapper>
-                            <Button larger="sm" variant='outline' type='submit'>Entrar</Button>
-                            <Button larger="sm" variant='fill' type='button'>Cadastra-se</Button>
-                            <ForgotPassword type='button'>Esqueceu sua senha ?</ForgotPassword>
+
+                            <Button
+                                larger="sm"
+                                variant='outline'
+                                type='submit'
+                            >
+                                Entrar
+                            </Button>
+
+                            <Link to="/auth/sign-up">
+                                <Button
+                                    larger="sm"
+                                    variant='fill'
+                                    type='button'
+                                >
+                                    Cadastra-se
+                                </Button>
+                            </Link>
+                            <Link to="/auth/forgot-password">
+                                <ForgotPassword type='button'>Esqueceu sua senha ?</ForgotPassword>
+                            </Link>
                         </ButtonsWrapper>
                     </Form>
                 </Container>
