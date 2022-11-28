@@ -9,14 +9,22 @@ export const Container = styled.div`
     text-align: center;
 `;
 
-export const RegistrationText = styled.h3`
+export const ChangeProfileTitle = styled.h4`
     font-weight: ${({ theme: { fonts } }) => fonts.weight.medium};
     font-size: 24px;
     line-height: 28px;
     color: ${({ theme: { white } }) => white.colors.WHITE[900]};
     text-shadow: 0px 4px 9px rgba(0, 0, 0, 0.25);
-    margin-bottom: ${70/16}rem;
     text-transform: uppercase;
+`;
+
+export const WarningText = styled.p`
+    color: ${({ theme: { white } }) => white.colors.WHITE[900]};
+    font-weight: ${({ theme: { fonts } }) => fonts.weight.regular};
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: ${70/16}rem;
+
 `;
 
 export const Form = styled.form`

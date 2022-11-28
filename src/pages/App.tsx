@@ -19,6 +19,9 @@ import { Profile } from "./Profile";
 import { UpdatePassword } from "./UpdatePassword";
 import { Settings } from "./Settings";
 import { ChangeProfile } from "./ChangeProfile";
+import { GlobalStyle } from "../style/styles";
+import { Context, IGlobalContext } from "../context/Global";
+import React from "react";
 
 const useAuth = () => {
   return localStorage.getItem("@token");
@@ -52,37 +55,46 @@ const GuestOutlet = () => {
   return <Outlet />
 };
 
+
 export function App() {
+
+  const { isOpen } = React.useContext(Context) as IGlobalContext;
+
+
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
+    <>
+      <GlobalStyle isOpen={isOpen} />
 
-        <Route path="/auth" element={<GuestOutlet />}>
-          <Route index element={<SignIn />} />
-          <Route path="sign-up" element={<SignUp />} />
-          <Route path="forgot-password" element={<ForgotPassword />} />
-        </Route>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
 
-        <Route element={<PrivateOutlet />}>
-
-          <Route path="settings" element={<Settings />} />
-
-          <Route path="dashboard" element={<DashboardOutlet />}>
-            <Route index element={<Dashboard />} />
-            <Route path="subjects" element={<Subjects />} />
-            <Route path="overview" element={<OverView />} />
-            <Route path="material" element={<Material />} />
+          <Route path="/auth" element={<GuestOutlet />}>
+            <Route index element={<SignIn />} />
+            <Route path="sign-up" element={<SignUp />} />
+            <Route path="forgot-password" element={<ForgotPassword />} />
           </Route>
 
-          <Route path="profile" element={<ProfileOutlet />}>
-            <Route index element={<Profile />} />
-            <Route path="update-password" element={<UpdatePassword />} />
-            <Route path="update-profile" element={<ChangeProfile />} />
-          </Route>
+          <Route element={<PrivateOutlet />}>
 
-        </Route>
-      </Routes>
-    </Router>
+            <Route path="settings" element={<Settings />} />
+
+            <Route path="dashboard" element={<DashboardOutlet />}>
+              <Route index element={<Dashboard />} />
+              <Route path="subjects" element={<Subjects />} />
+              <Route path="overview" element={<OverView />} />
+              <Route path="material" element={<Material />} />
+            </Route>
+
+            <Route path="profile" element={<ProfileOutlet />}>
+              <Route index element={<Profile />} />
+              <Route path="update-password" element={<UpdatePassword />} />
+              <Route path="update-profile" element={<ChangeProfile />} />
+            </Route>
+
+          </Route>
+        </Routes>
+      </Router>
+    </>
   );
 }

@@ -77,9 +77,9 @@ export function UpdatePassword() {
         <>
             <Reset />
             <ThemeProvider theme={theme}>
-                <Container onClick={handleSubmit(onSubmit)}>
+                <Container>
                     <ChangePasswordTitle>{words.changePassword.pt}</ChangePasswordTitle>
-                    <Form>
+                    <Form onClick={handleSubmit(onSubmit)}>
                         <FieldWrapper>
                             <Field.Root
                                 label="Senha atual"
@@ -148,7 +148,15 @@ export function UpdatePassword() {
 
                         <ButtonsWrapper>
                             <Button larger="lg" variant='outline' type='submit'>Confirmar</Button>
-                            <Button larger="lg" variant='fill' type='button'>Voltar</Button>
+                            <Link to="/profile">
+                                <Button
+                                    larger="lg"
+                                    variant='fill'
+                                    type='button'
+                                >
+                                    Voltar
+                                </Button>
+                            </Link>
                         </ButtonsWrapper>
                     </Form>
                 </Container>

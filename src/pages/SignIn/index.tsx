@@ -73,7 +73,6 @@ export function SignIn() {
     }
 
     return (
-        <>
             <ThemeProvider theme={theme}>
                 <Container>
                     <Logo />
@@ -147,6 +146,5 @@ export function SignIn() {
                     </Form>
                 </Container>
             </ThemeProvider>
-        </>
     );
 }
