@@ -60,7 +60,7 @@ export function App() {
     <>
       <GlobalStyle isOpen={isOpen} />
 
-      <Router>
+      <Router basename="/Avante-Pipeline/">
         <Routes>
           <Route path="/" element={<Home />} />
 
