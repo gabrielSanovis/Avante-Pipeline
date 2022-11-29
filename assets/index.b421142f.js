@@ -228,7 +228,7 @@ Error generating stack: `+o.message+`
     background-color: ${({theme:{white:e}})=>e.colors.GREEN[800]};
     display: flex;
     flex-direction: column;
-`,pd=P.exports.createContext(null),zx=({children:e})=>{const[t,n]=P.exports.useReducer(r=>!r,!1);return l(pd.Provider,{value:{isOpen:t,setIsOpen:n},children:e})};function am({rightChildren:e}){const{isOpen:t,setIsOpen:n}=Te.useContext(pd);return x(Mn,{theme:et,children:[!t&&x(bx,{children:[l(Wx,{src:"/fav.png",alt:"company logo abrr AVT (Avante)"}),e!=null?e:l(Mx,{onClick:()=>n(),children:l(kx,{size:50})})]}),t&&x(Ix,{children:[l(Nx,{onClick:()=>n(),children:l(jx,{size:50})}),l(Dx,{children:"Para onde quer ir ?"}),l(Rx,{children:l(It,{to:"/profile",children:l(qe,{larger:"lg",onClick:()=>n(),children:"Perfil"})})})]})]})}const Ux=R.section`
+`,pd=P.exports.createContext(null),zx=({children:e})=>{const[t,n]=P.exports.useReducer(r=>!r,!1);return l(pd.Provider,{value:{isOpen:t,setIsOpen:n},children:e})};function am({rightChildren:e}){const{isOpen:t,setIsOpen:n}=Te.useContext(pd);return x(Mn,{theme:et,children:[!t&&x(bx,{children:[l(Wx,{src:"/Avante-Pipeline/fav.png",alt:"company logo abrr AVT (Avante)"}),e!=null?e:l(Mx,{onClick:()=>n(),children:l(kx,{size:50})})]}),t&&x(Ix,{children:[l(Nx,{onClick:()=>n(),children:l(jx,{size:50})}),l(Dx,{children:"Para onde quer ir ?"}),l(Rx,{children:l(It,{to:"/profile",children:l(qe,{larger:"lg",onClick:()=>n(),children:"Perfil"})})})]})]})}const Ux=R.section`
     text-align: center;
     margin-bottom: 32px;
 `,Hx=R.article`
@@ -275,7 +275,7 @@ attempted value: ${o}
     width: 100vw;
     text-align: center;
 `,YC=R.div`
-    background-image: url("/fav.png");
+    background-image: url("/Avante-Pipeline/fav.png");
     background-size: contain;
     background-repeat: no-repeat;
     width: 100px;
@@ -554,7 +554,7 @@ border: none;
     object-fit: contain;
     width: 25px;
     height: 25px;
-`,H9=()=>x(D9,{children:[l(I9,{children:"Estat\xEDsticas"}),l(z9,{children:"Classifica\xE7\xE3o"}),x(U9,{children:[x(ja,{children:[x(Fa,{children:[l(xa,{size:25,color:et.white.colors.WHITE[900]}),l(Pr,{children:"1\xB0"})]}),x(Ta,{children:[l(Oa,{src:"/fav.png",alt:"company logo abrr AVT (Avante)"}),l(Pr,{children:"Vanessa de Souza"})]})]}),x(ja,{children:[x(Fa,{children:[l(xa,{size:25,color:et.white.colors.WHITE[900]}),l(Pr,{children:"99\xB0"})]}),x(Ta,{children:[l(Oa,{src:"/fav.png",alt:"company logo abrr AVT (Avante)"}),l(Pr,{children:"Gabriel dos Santos"}),l(sx,{size:25,weight:"fill",color:et.white.colors.GREEN[400]})]})]}),x(ja,{children:[x(Fa,{children:[l(xa,{size:25,color:et.white.colors.WHITE[900]}),l(Pr,{children:"100\xB0"})]}),x(Ta,{children:[l(Oa,{src:"/fav.png",alt:"company logo abrr AVT (Avante)"}),l(Pr,{children:"Robson Barbosa"}),l(ix,{size:25,weight:"fill",color:et.white.colors.RED[500]})]})]})]})]}),V9=R.header`
+`,H9=()=>x(D9,{children:[l(I9,{children:"Estat\xEDsticas"}),l(z9,{children:"Classifica\xE7\xE3o"}),x(U9,{children:[x(ja,{children:[x(Fa,{children:[l(xa,{size:25,color:et.white.colors.WHITE[900]}),l(Pr,{children:"1\xB0"})]}),x(Ta,{children:[l(Oa,{src:"/Avante-Pipeline/fav.png",alt:"company logo abrr AVT (Avante)"}),l(Pr,{children:"Vanessa de Souza"})]})]}),x(ja,{children:[x(Fa,{children:[l(xa,{size:25,color:et.white.colors.WHITE[900]}),l(Pr,{children:"99\xB0"})]}),x(Ta,{children:[l(Oa,{src:"/Avante-Pipeline/fav.png",alt:"company logo abrr AVT (Avante)"}),l(Pr,{children:"Gabriel dos Santos"}),l(sx,{size:25,weight:"fill",color:et.white.colors.GREEN[400]})]})]}),x(ja,{children:[x(Fa,{children:[l(xa,{size:25,color:et.white.colors.WHITE[900]}),l(Pr,{children:"100\xB0"})]}),x(Ta,{children:[l(Oa,{src:"/Avante-Pipeline/fav.png",alt:"company logo abrr AVT (Avante)"}),l(Pr,{children:"Robson Barbosa"}),l(ix,{size:25,weight:"fill",color:et.white.colors.RED[500]})]})]})]})]}),V9=R.header`
     display: flex;
     margin-block: 40px;
     justify-content: space-between;
@@ -580,7 +580,7 @@ border: none;
 `,Q9=R.div`
     display: flex;
     column-gap: 4px;
-`,q9=({welcome:e})=>x(V9,{children:[x(G9,{children:[x(B9,{children:[e," Gustavo Vieira!"]}),l(K9,{children:"Por aqui desde setembro de 2022"}),x(Q9,{children:[l(fx,{size:30,color:et.white.colors.WHITE[900]}),l(cx,{size:30,color:et.white.colors.WHITE[900]})]})]}),l(Z9,{src:"/fav.png",alt:"company logo abrr AVT (Avante)"})]}),Y9={header:{welcome:{pt:"Ol\xE1, "}},btn:{changeProfile:{pt:"Alterar cadastro"},changePassword:{pt:"Alterar senha"}}};function X9(){const{btn:e,header:t}=Y9;return x(Mn,{theme:et,children:[l(am,{}),x(M9,{children:[l(q9,{welcome:t.welcome.pt}),x(N9,{children:[l(It,{to:"/profile/update-profile",children:l(qe,{larger:"lg",children:e.changeProfile.pt})}),l(It,{to:"/profile/update-password",children:l(qe,{larger:"lg",children:e.changePassword.pt})})]}),l(H9,{})]})]})}var Ly=globalThis&&globalThis.__makeTemplateObject||function(e,t){return Object.defineProperty?Object.defineProperty(e,"raw",{value:t}):e.raw=t,e},J9=On(l1||(l1=Ly([`
+`,q9=({welcome:e})=>x(V9,{children:[x(G9,{children:[x(B9,{children:[e," Gustavo Vieira!"]}),l(K9,{children:"Por aqui desde setembro de 2022"}),x(Q9,{children:[l(fx,{size:30,color:et.white.colors.WHITE[900]}),l(cx,{size:30,color:et.white.colors.WHITE[900]})]})]}),l(Z9,{src:"/Avante-Pipeline/fav.png",alt:"company logo abrr AVT (Avante)"})]}),Y9={header:{welcome:{pt:"Ol\xE1, "}},btn:{changeProfile:{pt:"Alterar cadastro"},changePassword:{pt:"Alterar senha"}}};function X9(){const{btn:e,header:t}=Y9;return x(Mn,{theme:et,children:[l(am,{}),x(M9,{children:[l(q9,{welcome:t.welcome.pt}),x(N9,{children:[l(It,{to:"/profile/update-profile",children:l(qe,{larger:"lg",children:e.changeProfile.pt})}),l(It,{to:"/profile/update-password",children:l(qe,{larger:"lg",children:e.changePassword.pt})})]}),l(H9,{})]})]})}var Ly=globalThis&&globalThis.__makeTemplateObject||function(e,t){return Object.defineProperty?Object.defineProperty(e,"raw",{value:t}):e.raw=t,e},J9=On(l1||(l1=Ly([`
 /* http://meyerweb.com/eric/tools/css/reset/
    v5.0.1 | 20191019
    License: none (public domain)
