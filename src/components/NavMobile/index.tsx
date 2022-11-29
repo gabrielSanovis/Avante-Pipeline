@@ -53,9 +53,6 @@ export function NavMobile({ rightChildren }: any) {
             </ClosenNav>
             <NavTitle>Para onde quer ir ?</NavTitle>
             <ButtonWrapper>
-              <Link to="/dashboard">
-                <Button larger="lg" onClick={() => setIsOpen()} >Dashboard</Button>
-              </Link>
               <Link to="/profile">
                 <Button larger="lg" onClick={() => setIsOpen()} >Perfil</Button>
               </Link>

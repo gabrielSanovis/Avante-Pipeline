@@ -29,13 +29,6 @@ function PrivateOutlet() {
   return <Outlet />
 }
 
-function DashboardOutlet() {
-  // const auth = useAuth();
-  // return auth ? <Outlet /> : <Navigate to="/auth" />;
-  console.log("dashboard")
-  return <Outlet />
-}
-
 function ProfileOutlet() {
   // const auth = useAuth();
   // return auth ? <Outlet /> : <Navigate to="/auth" />;
@@ -71,8 +64,6 @@ export function App() {
           </Route>
 
           <Route element={<PrivateOutlet />}>
-            <Route path="dashboard" element={<DashboardOutlet />}>
-            </Route>
 
             <Route path="profile" element={<ProfileOutlet />}>
               <Route index element={<Profile />} />
