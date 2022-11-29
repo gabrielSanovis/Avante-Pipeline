@@ -8,14 +8,14 @@ import { List, X } from "phosphor-react";
 // STYLES
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../../style/theme';
-import { 
-    HeaderWrapper, 
-    ButtonWrapper, 
-    Logo, 
-    OpenNav, 
-    NavigationScreen, 
-    ClosenNav, 
-    NavTitle 
+import {
+  HeaderWrapper,
+  ButtonWrapper,
+  Logo,
+  OpenNav,
+  NavigationScreen,
+  ClosenNav,
+  NavTitle
 } from "./styles";
 
 // COMPONENTS
@@ -24,7 +24,7 @@ import { Button } from "../../components/Button";
 // CONTEXT
 import { Context, IGlobalContext } from "../../context/Global";
 
-export function NavMobile() {
+export function NavMobile({ rightChildren }: any) {
 
   const { isOpen, setIsOpen } = React.useContext(Context) as IGlobalContext;
 
@@ -34,9 +34,13 @@ export function NavMobile() {
         !isOpen && (
           <HeaderWrapper>
             <Logo src="/fav.png" alt="company logo abrr AVT (Avante)" />
-            <OpenNav onClick={() => setIsOpen()}>
-              <List size={50} />
-            </OpenNav>
+            {
+              rightChildren
+              ?? <OpenNav onClick={() => setIsOpen()}>
+                  <List size={50} />
+                  </OpenNav>
+            }
+
           </HeaderWrapper>
         )
       }
