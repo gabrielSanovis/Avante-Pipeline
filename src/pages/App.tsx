@@ -65,7 +65,7 @@ export function App() {
     <>
       <GlobalStyle isOpen={isOpen} />
 
-      <Router basename="https://gabrielsanovis.github.io/Avante-Pipeline/" >
+      <Router basename="/Avante-Pipeline">
         <Routes>
           <Route path="/" element={<Home />} />
 
