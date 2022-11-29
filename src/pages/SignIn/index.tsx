@@ -75,7 +75,7 @@ export function SignIn() {
     return (
             <ThemeProvider theme={theme}>
                 <Container>
-                    <Logo />
+                    <Logo role="img" />
                     <WelcomeText>{words.welcomeText.pt}</WelcomeText>
                     <Form onSubmit={handleSubmit(onSubmit)} >
                         <FieldWrapper>

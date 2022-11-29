@@ -4,21 +4,48 @@ import { Link } from "react-router-dom"
 // STYLES
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../../style/theme';
-import { Context, IGlobalContext } from "../../context/Global";
-import React from "react";
-
 import { NavMobile } from "../../components/NavMobile";
+import {
+  Container,
+  WrapperNav
+} from "./styles";
+import { Button } from "../../components/Button";
+import { Statistic } from "./components/Statistic";
+import { Header } from "./components/Header";
+import { words } from "./mock";
 
 export function Profile() {
 
-  const { isOpen, setIsOpen } = React.useContext(Context) as IGlobalContext;
+  const {btn, header} = words;
 
   return (
     <ThemeProvider theme={theme}>
+
       <NavMobile />
-      <h1>Profile</h1>
-      <button><Link to="/profile/update-profile">Update Profile</Link></button>
-      <button><Link to="/profile/update-password">Update Password</Link></button>
+
+      <Container>
+
+        <Header
+          welcome={header.welcome.pt}
+        />
+
+        <WrapperNav>
+          <Link to="/profile/update-profile">
+            <Button larger="lg">
+              {btn.changeProfile.pt}
+            </Button>
+          </Link>
+          <Link to="/profile/update-password">
+            <Button larger="lg">
+              {btn.changePassword.pt}
+            </Button>
+          </Link>
+        </WrapperNav>
+
+        <Statistic />
+
+      </Container>
+
     </ThemeProvider>
   )
 }
