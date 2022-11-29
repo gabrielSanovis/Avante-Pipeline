@@ -5,6 +5,7 @@ export const GlobalStyle = createGlobalStyle<{isOpen: boolean}>`
         background-color: #127475;
         overflow-x: hidden;
         margin: 0;
+        overflow-y: visible;
         padding: 0;
         ${props => props.isOpen ? css`overflow-y: hidden;` : null}
     }
