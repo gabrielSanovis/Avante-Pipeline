@@ -69,7 +69,7 @@ export function SignIn() {
     });
 
     function onSubmit(data: userFormSignIn) {
-        navigate("/dashboard")
+        navigate("/profile")
     }
 
     return (
