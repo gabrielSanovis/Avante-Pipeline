@@ -33,7 +33,7 @@ export function NavMobile({ rightChildren }: any) {
       {
         !isOpen && (
           <HeaderWrapper>
-            <Logo src="/fav.png" alt="company logo abrr AVT (Avante)" />
+            <Logo src="/Avante-Pipeline/fav.png" alt="company logo abrr AVT (Avante)" />
             {
               rightChildren
               ?? <OpenNav onClick={() => setIsOpen()}>

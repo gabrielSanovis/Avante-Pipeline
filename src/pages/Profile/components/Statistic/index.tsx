@@ -24,7 +24,7 @@ export const Statistic = () => {
                 <RankText>1°</RankText>
               </PositionWrapper>
               <RankContentWrapper>
-                <RankImg src="/fav.png" alt="company logo abrr AVT (Avante)" />
+                <RankImg src="/Avante-Pipeline/fav.png" alt="company logo abrr AVT (Avante)" />
                 <RankText>
                   Vanessa de Souza
                 </RankText>
@@ -37,7 +37,7 @@ export const Statistic = () => {
                 <RankText>99°</RankText>
               </PositionWrapper>
               <RankContentWrapper>
-                <RankImg src="/fav.png" alt="company logo abrr AVT (Avante)" />
+                <RankImg src="/Avante-Pipeline/fav.png" alt="company logo abrr AVT (Avante)" />
                 <RankText>
                   Gabriel dos Santos 
                 </RankText>
@@ -51,7 +51,7 @@ export const Statistic = () => {
                 <RankText>100°</RankText>
               </PositionWrapper>
               <RankContentWrapper>
-                <RankImg src="/fav.png" alt="company logo abrr AVT (Avante)" />
+                <RankImg src="/Avante-Pipeline/fav.png" alt="company logo abrr AVT (Avante)" />
                 <RankText>
                   Robson Barbosa 
                 </RankText>

@@ -10,7 +10,7 @@ export const Container = styled.div`
 `;
 
 export const Logo = styled.div`
-    background-image: url("/fav.png");
+    background-image: url("/Avante-Pipeline/fav.png");
     background-size: contain;
     background-repeat: no-repeat;
     width: 100px;
