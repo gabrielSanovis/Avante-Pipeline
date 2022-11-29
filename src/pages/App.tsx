@@ -65,11 +65,11 @@ export function App() {
     <>
       <GlobalStyle isOpen={isOpen} />
 
-      <Router basename="/Avante-Pipeline">
+      <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/Avante-Pipeline/" element={<Home />} />
 
-          <Route path="/auth" element={<GuestOutlet />}>
+          <Route path="/Avante-Pipeline/auth" element={<GuestOutlet />}>
             <Route index element={<SignIn />} />
             <Route path="sign-up" element={<SignUp />} />
             <Route path="forgot-password" element={<ForgotPassword />} />
@@ -77,16 +77,16 @@ export function App() {
 
           <Route element={<PrivateOutlet />}>
 
-            <Route path="settings" element={<Settings />} />
+            <Route path="/Avante-Pipeline/settings" element={<Settings />} />
 
-            <Route path="dashboard" element={<DashboardOutlet />}>
+            <Route path="/Avante-Pipeline/dashboard" element={<DashboardOutlet />}>
               <Route index element={<Dashboard />} />
               <Route path="subjects" element={<Subjects />} />
               <Route path="overview" element={<OverView />} />
               <Route path="material" element={<Material />} />
             </Route>
 
-            <Route path="profile" element={<ProfileOutlet />}>
+            <Route path="/Avante-Pipeline/profile" element={<ProfileOutlet />}>
               <Route index element={<Profile />} />
               <Route path="update-password" element={<UpdatePassword />} />
               <Route path="update-profile" element={<ChangeProfile />} />

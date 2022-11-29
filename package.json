@@ -1,7 +1,7 @@
 {
   "name": "avante",
   "private": true,
-  "homepage": "/Avante-Pipeline/#",
+  "homepage": "/Avante-Pipeline/",
   "version": "0.1.0",
   "type": "module",
   "scripts": {
