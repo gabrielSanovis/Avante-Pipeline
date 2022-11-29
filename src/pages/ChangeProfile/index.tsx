@@ -21,14 +21,7 @@ import * as yup from "yup"
 import { useForm } from 'react-hook-form';
 import { yupResolver } from "@hookform/resolvers/yup"
 import { Link, useNavigate } from "react-router-dom"
-
-export interface userFormSignUp {
-    nickname?: string;
-    name?: string;
-    lastName?: string;
-    email?: string;
-    numberPhone?: string;
-}
+import { userFormSignUp } from '../../@types';
 
 const CreateUserFormSchema = yup.object().shape({
     email: yup.string().matches(emailRegex),
@@ -37,7 +30,6 @@ const CreateUserFormSchema = yup.object().shape({
     nickname: yup.string(),
     numberPhone: yup.string()
 });
-
 
 export function ChangeProfile() {
 
@@ -50,9 +42,6 @@ export function ChangeProfile() {
     } = useForm<userFormSignUp>({
         resolver: yupResolver(CreateUserFormSchema),
     });
-
-
-
 
     const onSubmit = (data: userFormSignUp) => {
         navigate("/profile")

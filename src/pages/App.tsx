@@ -11,13 +11,8 @@ import { Home } from "./Home";
 import { SignIn } from "./SignIn";
 import { SignUp } from "./SignUp";
 import { ForgotPassword } from "./ForgotPassword";
-import { Dashboard } from "./Dashboard";
-import { OverView } from "./OverView";
-import { Subjects } from "./Subjects";
-import { Material } from "./Material";
 import { Profile } from "./Profile";
 import { UpdatePassword } from "./UpdatePassword";
-import { Settings } from "./Settings";
 import { ChangeProfile } from "./ChangeProfile";
 import { GlobalStyle } from "../style/styles";
 import { Context, IGlobalContext } from "../context/Global";
@@ -76,14 +71,7 @@ export function App() {
           </Route>
 
           <Route element={<PrivateOutlet />}>
-
-            <Route path="settings" element={<Settings />} />
-
             <Route path="dashboard" element={<DashboardOutlet />}>
-              <Route index element={<Dashboard />} />
-              <Route path="subjects" element={<Subjects />} />
-              <Route path="overview" element={<OverView />} />
-              <Route path="material" element={<Material />} />
             </Route>
 
             <Route path="profile" element={<ProfileOutlet />}>

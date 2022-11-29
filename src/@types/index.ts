@@ -39,3 +39,11 @@ interface IFonts {
         bold: string
     }
 }
+
+export interface userFormSignUp {
+    nickname?: string;
+    name?: string;
+    lastName?: string;
+    email?: string;
+    numberPhone?: string;
+}

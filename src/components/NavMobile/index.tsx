@@ -59,9 +59,6 @@ export function NavMobile({ rightChildren }: any) {
               <Link to="/profile">
                 <Button larger="lg" onClick={() => setIsOpen()} >Perfil</Button>
               </Link>
-              <Link to="/settings">
-                <Button larger="lg" onClick={() => setIsOpen()} >Configurações</Button>
-              </Link>
             </ButtonWrapper>
           </NavigationScreen>
         )
