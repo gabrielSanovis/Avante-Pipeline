@@ -1,4 +1,5 @@
-interface IThemeProps {
+
+export interface IThemeProps {
     white: {
         colors: IColors
     },

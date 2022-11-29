@@ -1,3 +1,5 @@
+import { IThemeProps } from "../@types";
+
 export const theme: IThemeProps = {
 
     white: {
